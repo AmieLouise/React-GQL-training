@@ -6,7 +6,7 @@ export default class _document extends Document {
         return (
             <Html lang='en-GB' >
                 <body>
-                {/* <Head></Head> */}
+                <Head />
                 <Main />
                 <NextScript />
                 </body>
