@@ -26,5 +26,6 @@
     "javascriptreact"
   ],
   "editor.tabSize": 2,
-  "editor.useTabStops": false
+  "editor.useTabStops": false,
+  "editor.detectIndentation": false
 }
