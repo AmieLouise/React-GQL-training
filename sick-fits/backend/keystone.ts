@@ -1,3 +1,4 @@
+import { User } from './schemas/User';
 import 'dotenv/config';
 import { config, createSchema } from '@keystone-next/keystone/schema'
 
@@ -21,6 +22,7 @@ export default config({
     //TODO: Add data seeding here 
   },
   lists: createSchema({
+    User
     //schema items to go in here 
   }),
   ui: {
