@@ -1,5 +1,5 @@
 import { list } from "@keystone-next/keystone/schema";
-import { integer, select, text } from "@keystone-next/fields"
+import { integer, select, text, relationship } from '@keystone-next/fields';
 
 export const Product = list({
   // TODO
@@ -11,6 +11,15 @@ export const Product = list({
         displayMode: 'textarea',
       }
     }),
+    photo: relationship({
+      ref: 'ProductImage.product',
+      ui: {
+        displayMode: 'cards',
+        cardFields: ['image', 'altText'],
+        inlineCreate: { fields: ['image', 'altText'] },
+        inlineEdit: { fields: ['image', 'altText'] },
+      }
+    }),  // references the product field within the ProductImage datatype to create link between two fields in different types 
     status: select({
       options: [
         { label: 'Draft', value: 'DRAFT' },
