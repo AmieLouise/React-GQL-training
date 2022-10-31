@@ -19,7 +19,7 @@ export const ProductImage = list({
     product: relationship({ ref: 'Product.photo' })
   },
   ui: {
-    listView: {
+    listView: {  //Set what columns should show in the ProductImage page of Keystone 
       initialColumns: ['image', 'altText', 'product']
     }
   }

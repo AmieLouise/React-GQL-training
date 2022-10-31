@@ -5,20 +5,21 @@ import { ServerStyleSheet } from 'styled-components'
 export default class _document extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet
-    const page = renderPage((App) => (props) =>  sheet.collectStyles(<App {...props} />))
+    const page = renderPage((App) => (props) => sheet.collectStyles(<App {...props} />))
     const styleTags = sheet.getStyleElement()
-    
-    return {...page, styleTags}
+
+    return { ...page, styleTags }
   }
-    render() {
-        return (
-            <Html lang='en-GB' >
-                <body>
-                <Head />
-                <Main />
-                <NextScript />
-                </body>
-            </Html>
-        )
-    }
+
+  render() {
+    return (
+      <Html lang='en-GB' >
+        <body>
+          <Head />
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+  }
 }
